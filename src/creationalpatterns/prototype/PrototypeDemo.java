@@ -8,4 +8,11 @@ package creationalpatterns.prototype;
  * 回它的克隆，在需要的时候更新数据库，以此减少数据库调用。
  */
 public class PrototypeDemo {
+    public static void main(String[] args) {
+        ShapeCache.loadCache();
+        Shape shape = ShapeCache.getShape("1");
+        shape.draw();
+        Shape shape2 = ShapeCache.getShape("2");
+        shape2.draw();
+    }
 }
